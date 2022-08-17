@@ -43,7 +43,7 @@ const Home = () => {
   const history = useHistory();
   useEffect(() => {
     dispatch(loadUsers());
-  }, []);
+  }, [dispatch]);
   const handleDelete = (id) => {
     if (window.confirm("Are you sure to delete the user?")) {
       dispatch(deleteUsers(id));
