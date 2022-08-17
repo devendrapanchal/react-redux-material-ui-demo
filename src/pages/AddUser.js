@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../redux/actions";
@@ -38,9 +39,10 @@ const AddUser = () => {
         color="primary"
         size="small"
       >
+        <ArrowBackIosNewIcon />
         Go Back
       </Button>
-      <h1>ADD USER</h1>
+      <h1>Add User</h1>
       <Box
         onSubmit={(e) => handleSubmit(e)}
         component="form"

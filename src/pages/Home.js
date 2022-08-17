@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
+import "../index.css";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import Button from "@mui/material/Button";
+import { DeleteOutline } from "@mui/icons-material";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
@@ -51,11 +55,12 @@ const Home = () => {
         <Button
           onClick={() => history("/addUser")}
           variant="contained"
-          style={{ margin: "5px" }}
           color="primary"
           size="small"
+          style={{ textTransform: "none", margin: "10px", padding: "10px" }}
         >
-          ADD USER
+          <AddCircleOutlineIcon />
+          Add User
         </Button>
       </div>
       <TableContainer component={Paper}>
@@ -94,6 +99,7 @@ const Home = () => {
                         color="secondary"
                         onClick={() => handleDelete(row.id)}
                       >
+                        <DeleteOutline />
                         Delete
                       </Button>
                       <Button
@@ -101,6 +107,7 @@ const Home = () => {
                         style={{ margin: "5px" }}
                         color="primary"
                       >
+                        <ModeEditIcon />
                         Edit
                       </Button>
                     </ButtonGroup>

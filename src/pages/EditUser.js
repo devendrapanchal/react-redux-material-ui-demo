@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { DeleteOutline } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleUsers, updateUser } from "../redux/actions";
@@ -51,6 +53,7 @@ const EditUser = () => {
         color="primary"
         size="small"
       >
+        <ArrowBackIosNewIcon />
         Go Back
       </Button>
       <h1>Edit USER</h1>
