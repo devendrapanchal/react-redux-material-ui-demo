@@ -1,0 +1,39 @@
+{
+  "user": [
+    {
+      "name": "Deven",
+      "address": "Ahmedabad",
+      "email": "Deven@gmail.com",
+      "contact": "0000000000",
+      "id": 1
+    },
+    {
+      "name": "hitesh",
+      "address": "palanpur",
+      "email": "Deven@gmail.com",
+      "contact": "0000000000",
+      "id": 2
+    },
+    {
+      "name": "mitesh",
+      "address": "surat",
+      "email": "Deven@gmail.com",
+      "contact": "0000000000",
+      "id": 3
+    },
+    {
+      "name": "suresh",
+      "address": "banglore",
+      "email": "Deven@gmail.com",
+      "contact": "0000000000",
+      "id": 4
+    },
+    {
+      "name": "gaurang",
+      "email": "gaurang@gmail.com",
+      "contact": "9898989898",
+      "address": "this is address",
+      "id": 5
+    }
+  ]
+}
