@@ -49,7 +49,12 @@ const EditUser = () => {
       <Button
         onClick={() => history("/")}
         variant="contained"
-        style={{ margin: "20px", width: "100x", display: "flex" }}
+        style={{
+          margin: "20px",
+          width: "100x",
+          display: "flex",
+          textTransform: "none",
+        }}
         color="primary"
         size="small"
       >
@@ -110,7 +115,7 @@ const EditUser = () => {
         <br />
         <Button
           variant="contained"
-          style={{ width: "100px" }}
+          style={{ width: "100px", padding: "5px", textTransform: "none" }}
           color="primary"
           size="small"
           type="submit"

@@ -95,7 +95,7 @@ const Home = () => {
                       aria-label="button group"
                     >
                       <Button
-                        style={{ margin: "5px" }}
+                        style={{ margin: "5px", textTransform: "none" }}
                         color="secondary"
                         onClick={() => handleDelete(row.id)}
                       >
@@ -104,7 +104,7 @@ const Home = () => {
                       </Button>
                       <Button
                         onClick={() => history(`/editUser/${row.id}`)}
-                        style={{ margin: "5px" }}
+                        style={{ margin: "5px", textTransform: "none" }}
                         color="primary"
                       >
                         <ModeEditIcon />
