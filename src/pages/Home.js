@@ -96,7 +96,11 @@ const Home = () => {
                       >
                         Delete
                       </Button>
-                      <Button style={{ margin: "5px" }} color="primary">
+                      <Button
+                        onClick={() => history(`/editUser/${row.id}`)}
+                        style={{ margin: "5px" }}
+                        color="primary"
+                      >
                         Edit
                       </Button>
                     </ButtonGroup>

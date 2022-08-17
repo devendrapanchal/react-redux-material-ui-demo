@@ -11,6 +11,15 @@ const userAdded = (user) => ({
   type: types.ADD_USER,
   payload: user,
 });
+const getUser = (user) => ({
+  type: types.GET_SINGLE_USER,
+  payload: user,
+});
+
+const userUpdated = (user) => ({
+  type: types.UPDATE_USER,
+  payload: user,
+});
 
 export const loadUsers = () => {
   return function (dispatch) {
@@ -45,6 +54,30 @@ export const addUser = (user) => {
         console.log("resp", resp.data);
         dispatch(userAdded(user));
         // dispatch(loadUsers());
+      })
+      .catch((error) => console.log("error", error));
+  };
+};
+
+export const getSingleUsers = (id) => {
+  return function (dispatch) {
+    axios
+      .get(`http://localhost:5000/user/${id}`)
+      .then((resp) => {
+        console.log("resp", resp.data);
+        dispatch(getUser(resp.data));
+      })
+      .catch((error) => console.log("error", error));
+  };
+};
+
+export const updateUser = (user, id) => {
+  return function (dispatch) {
+    axios
+      .put(`http://localhost:5000/user/${id}`, user)
+      .then((resp) => {
+        console.log("resp", resp.data);
+        dispatch(userUpdated());
       })
       .catch((error) => console.log("error", error));
   };
