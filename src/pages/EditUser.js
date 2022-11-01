@@ -36,7 +36,7 @@ const EditUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !address || !email || !contact) {
-      console.log("please input all input field");
+      console.log("please input all input field that is required");
     } else {
       dispatch(updateUser(state, id));
       history("/");
